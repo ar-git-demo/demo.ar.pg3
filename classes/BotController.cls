@@ -1,5 +1,7 @@
 public with sharing class BotController {
-
+// Commented for demo June-12-2019
+// Developer -1 June-12-2019
+// Test Peter
     class HandlerMapping {
         
         public String handlerClassName;
@@ -19,11 +21,12 @@ public with sharing class BotController {
         System.debug(commands);
         List<HandlerMapping> mappings = new List<HandlerMapping>();
         for (Bot_Command__c command : commands) {
-			mappings.add(new HandlerMapping(command.apex_class__c, command.pattern__c));
+            mappings.add(new HandlerMapping(command.apex_class__c, command.pattern__c));
         }
         handlerMappings = mappings;
     }
-    
+// Commented for demo on June-12-2019
+// Developer -1 June-12-2019    
     @AuraEnabled
     public static BotResponse submit(String utterance, Map<String, String> session, String fileName, String fileContent) {
         
